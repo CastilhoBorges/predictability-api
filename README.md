@@ -1,2 +1,3 @@
-# predictability-api
-Aplicação para previsão de saldo bancario
+# Predictability
+
+- Uma API para a previsão do seu saldo bancario.
