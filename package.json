@@ -1,0 +1,20 @@
+{
+  "name": "predictability-api",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[DAPI para previsão financeira\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "api",
+    "financeiro",
+    "express",
+    "node",
+    "postgres",
+    "docker"
+  ],
+  "author": "Augusto Castilho Borges",
+  "license": "ISC"
+}
