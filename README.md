@@ -1,3 +1,3 @@
 # Predictability
 
-- Uma API para a previsão do seu saldo bancario.
+Uma API para a previsão do seu saldo bancario.
