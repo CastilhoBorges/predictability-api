@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize-typescript";
 import dotenv from "dotenv";
-import { User } from "@Models/Entity/User.js";
-import { Transaction } from "@Models/Entity/Transaction.js";
-import { DailySpending } from "@Models/Entity/DailySpending.js";
-import { AverageSpendingDay } from "@Models/Entity/AverageSpending.js";
+import { User } from "@Models/Entity/User";
+import { Transaction } from "@Models/Entity/Transaction";
+import { DailySpending } from "@Models/Entity/DailySpending";
+import { AverageSpendingDay } from "@Models/Entity/AverageSpending";
 
 dotenv.config();
 

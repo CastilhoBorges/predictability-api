@@ -1,3 +1,4 @@
+import { Optional } from "sequelize";
 import {
   Table,
   Column,
@@ -7,16 +8,24 @@ import {
   Default,
 } from "sequelize-typescript";
 
+interface UserAttributes {
+  user_id: string;
+  email: string;
+  password_hash: string;
+}
+
+interface UserCreateAttributes extends Optional<UserAttributes, "user_id"> {}
+
 @Table({
   tableName: "user",
   timestamps: false,
 })
-export class User extends Model<User> {
+export class User extends Model<UserAttributes, UserCreateAttributes> {
   @PrimaryKey
   @Default(DataType.UUIDV4)
   @Column({
     type: DataType.UUID,
-    allowNull: false,
+    allowNull: true,
   })
   user_id!: string;
 

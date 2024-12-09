@@ -8,7 +8,7 @@ import {
   Default,
   BelongsTo,
 } from "sequelize-typescript";
-import { User } from "./User.js"; 
+import { User } from "./User"; 
 
 @Table({
   tableName: "daily_spending",

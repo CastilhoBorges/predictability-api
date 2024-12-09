@@ -1,10 +1,10 @@
-import app from "./app.config.js";
-import sequelize from "@Config/database.js";
+import app from "./app.config";
+import sequelize from "@Config/database";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-const PORT = process.env.APP_PORT || 3000;
+const PORT = process.env.APP_PORT || 3001;
 
 (async () => {
   try {
