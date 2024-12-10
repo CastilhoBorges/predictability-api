@@ -4,7 +4,7 @@ import { authMiddleware } from "@Middlewares/AuthMiddleware";
 
 class UserRoutes extends BaseRoutes {
   protected postRoutes(): void {
-    this.router.post("/", UserController.registerUser);
+    this.router.post("/", UserController.createUserController);
   }
 }
 
