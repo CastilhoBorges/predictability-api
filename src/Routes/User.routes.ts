@@ -1,25 +1,11 @@
-import { Router } from "express";
+import { BaseRoutes } from "@Utils/BaseRoutes";
 import { UserController } from "@Controllers/UserController";
+import { authMiddleware } from "@Middlewares/AuthMiddleware";
 
-class UserRoutes {
-  private router: Router;
-
-  constructor() {
-    this.router = Router();
-    this.initializeRoutes();
-  }
-
-  private initializeRoutes() {
-    this.postRoutes();
-  }
-
-  private postRoutes() {
+class UserRoutes extends BaseRoutes {
+  protected postRoutes(): void {
     this.router.post("/", UserController.registerUser);
-  }
-
-  public getRoutes(): Router {
-    return this.router;
   }
 }
 
-export default new UserRoutes();
+export default new UserRoutes().Routes();

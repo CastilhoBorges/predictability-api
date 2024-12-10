@@ -3,18 +3,16 @@ import { UserRepositoty } from "@Repositorys/UserRepository";
 
 describe("Teste de Carga no Banco de Dados", () => {
   beforeAll(async () => {
-    // Sincroniza o banco antes do teste
     await sequelize.sync({ force: true });
   });
 
   afterAll(async () => {
-    // Fecha a conexão após o teste
     await sequelize.close();
   });
 
   it("Deve inserir uma grande quantidade de registros no banco", async () => {
-    const records = 100000; // Número de registros a serem inseridos
-    const startTime = Date.now(); // Marca o início do teste
+    const records = 100000;
+    const startTime = Date.now(); 
 
     // Loop para inserir os registros
     for (let i = 0; i < records; i++) {
@@ -23,7 +21,7 @@ describe("Teste de Carga no Banco de Dados", () => {
       await UserRepositoty.createUser(email, passwordHash);
     }
 
-    const endTime = Date.now(); // Marca o fim do teste
+    const endTime = Date.now(); 
     console.log(
       `Inseridos ${records} registros em ${(endTime - startTime) / 1000}s`
     );
